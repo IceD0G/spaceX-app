@@ -32,6 +32,7 @@
     ]
   },
   "devDependencies": {
-    "react-rellax-wrapper": "^1.0.5"
+    "react-rellax-wrapper": "^1.0.5",
+    "react-router-dom": "^5.2.0"
   }
 }

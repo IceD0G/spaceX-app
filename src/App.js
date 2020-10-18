@@ -1,7 +1,9 @@
 
 import React from 'react';
-// import Calendar from './components/calendar/Calendar';
-// import Details from './components/details/Details';
+import { BrowserRouter, Route } from 'react-router-dom'
+// import { } from ''
+import Calendar from './components/calendar/Calendar';
+import Details from './components/details/Details';
 import Features from './components/features/Features';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
@@ -51,13 +53,29 @@ class App extends React.Component {
 
   render() {
     return (
-      <>
+      <BrowserRouter>
         <Header rockets={this.state.rockets} changeRocket={this.changeRocket} />
-        { this.state.company && <Home company={this.state.company} />}
-        {/* <Main rocket={this.state.rocket} />
-        { this.state.rocketFeatures && <Features {... this.state.rocketFeatures} />} */}
+
+        <Route exact path='/'>
+          {this.state.company && <Home company={this.state.company} />}
+        </Route>
+
+        <Route path='/rocket'>
+          <Main rocket={this.state.rocket} />
+          {this.state.rocketFeatures &&
+            <Features {... this.state.rocketFeatures} />}
+        </Route>
+
+        <Route path='/calendar'>
+          <Calendar />
+        </Route>
+
+        <Route path='/details'>
+          <Details />
+        </Route>
+
         { this.state.company && <Footer {...this.state.company.links} />}
-      </>
+      </BrowserRouter>
     )
   }
 
