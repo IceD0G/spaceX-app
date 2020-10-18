@@ -8,7 +8,7 @@ const Home = ({ company }) => (
 		<div className="container">
 			<hgroup className="title">
 				<h1>
-					<img className="logo-title" src={logo} alt={company.name}/>
+					<img className="logo-title" src={logo} alt={company.name} />
 				</h1>
 				<h2 className="subtitle">
 					{company.summary}
@@ -65,8 +65,8 @@ const Home = ({ company }) => (
 				</table>
 
 				<video id="video" autoPlay loop muted className="responsive-video" width="100%" height="100%" preload="auto">
-					<source type="video/mp4" src="https://www.spacex.com/media/mission_reusability.mp4"/>
-					<source type="video/webm" src="https://www.spacex.com/media/mission_reusability.webm"/>
+					<source type="video/mp4" src="https://www.spacex.com/media/mission_reusability.mp4" />
+					<source type="video/webm" src="https://www.spacex.com/media/mission_reusability.webm" />
 				</video>
 			</div>
 
